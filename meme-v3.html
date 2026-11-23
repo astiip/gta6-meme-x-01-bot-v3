@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1024px; height: 1024px; background: #101c33; font-family: Arial, Helvetica, sans-serif; color: #101c33; }
+  .card { position: absolute; left: 46px; top: 56px; width: 932px; height: 912px; background: #fdf8ec; border-radius: 24px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,.5); display: flex; flex-direction: column; }
+  /* header */
+  .head { background: #101c33; color: #fff; padding: 22px 36px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 5px solid #c8107a; flex: none; }
+  .head .l .name { font-size: 44px; font-weight: 900; letter-spacing: 2px; line-height: 1; }
+  .head .l .sub { font-size: 15px; letter-spacing: 3px; color: #ffb35c; margin-top: 8px; font-weight: 700; }
+  .head .r { text-align: right; }
+  .head .r .t1 { font-size: 26px; font-weight: 900; letter-spacing: 2px; line-height: 1; }
+  .head .r .t2 { font-size: 15px; letter-spacing: 3px; color: #9fb4d8; margin-top: 8px; font-weight: 700; }
+  /* headline: the joke itself, giant */
+  .headline { padding: 24px 36px 0; flex: none; }
+  .headline .h { font-size: 82px; font-weight: 900; letter-spacing: 1px; line-height: 1.02; color: #d21f3c; }
+  /* middle: photo + fields */
+  .mid { display: flex; gap: 28px; padding: 20px 36px 0; flex: none; }
+  .photo { width: 240px; flex: none; }
+  .photo .frame { width: 240px; height: 240px; background: #fff; border: 4px solid #101c33; position: relative; overflow: hidden; }
+  .photo .frame img { width: 100%; height: 100%; display: block; }
+  .photo .frame svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .photo .cap { text-align: center; font-size: 14px; letter-spacing: 3px; color: #5a6b8a; font-weight: 700; margin-top: 9px; }
+  .fields { flex: 1; }
+  .row { display: flex; align-items: baseline; padding: 7px 0; border-bottom: 1px solid #ddd2b8; }
+  .row .lab { width: 170px; flex: none; font-size: 13px; letter-spacing: 1px; color: #5a6b8a; font-weight: 700; }
+  .row .val { font-family: 'Courier New', monospace; font-size: 23px; font-weight: 700; color: #101c33; }
+  /* supporting facts, one line */
+  .support { padding: 18px 36px 0; text-align: center; font-size: 17px; letter-spacing: 1px; color: #3c4a63; font-weight: 700; flex: none; }
+  /* fee + stamp */
+  .fee { margin: 16px 36px 0; display: flex; align-items: center; justify-content: center; gap: 26px; flex: none; }
+  .fee .ftext { font-size: 29px; font-weight: 900; letter-spacing: 1px; color: #101c33; }
+  .stamp { transform: rotate(-8deg); border: 4px solid #0a7a3d; color: #0a7a3d; border-radius: 8px; padding: 4px 14px; font-size: 30px; font-weight: 900; letter-spacing: 3px; background: rgba(253,248,236,.9); white-space: nowrap; }
+  /* banner: make.fun, magenta, big */
+  .banner { margin-top: auto; background: #c8107a; color: #fff; padding: 20px 36px; display: flex; align-items: center; gap: 24px; flex: none; }
+  .banner img { width: 96px; height: 96px; flex: none; }
+  .banner .btext { flex: 1; text-align: center; }
+  .banner .b1 { font-size: 34px; font-weight: 900; letter-spacing: 1px; line-height: 1.1; }
+  .banner .b2 { font-size: 24px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="head">
+    <div class="l">
+      <div class="name">LEONIDA DMV</div>
+      <div class="sub">DEPT. OF MOTOR VEHICLES &middot; VICE CITY</div>
+    </div>
+    <div class="r">
+      <div class="t1">DRIVER&rsquo;S LICENSE</div>
+      <div class="t2">RENEWAL NOTICE</div>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="h">LICENSE EXPIRED<br>13 YEARS AGO.</div>
+  </div>
+
+  <div class="mid">
+    <div class="photo">
+      <div class="frame">
+        <img src="ghost-mark-1024.png" alt="make.fun ghost, license photo">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <rect x="34" y="33" width="15" height="11" rx="4" fill="#111"/>
+          <rect x="51" y="33" width="15" height="11" rx="4" fill="#111"/>
+          <rect x="48.5" y="36.5" width="3" height="2.5" fill="#111"/>
+          <rect x="30" y="36.5" width="4" height="2.5" fill="#111"/>
+          <rect x="66" y="36.5" width="4" height="2.5" fill="#111"/>
+          <line x1="37" y1="35" x2="43" y2="42" stroke="#fff" stroke-width="1.2" opacity="0.55"/>
+          <line x1="54" y1="35" x2="60" y2="42" stroke="#fff" stroke-width="1.2" opacity="0.55"/>
+        </svg>
+      </div>
+      <div class="cap">LICENSE PHOTO</div>
+    </div>
+    <div class="fields">
+      <div class="row"><div class="lab">NAME</div><div class="val">GRAND THEFT AUTO V</div></div>
+      <div class="row"><div class="lab">LICENSE NO</div><div class="val">GTA-V-2013</div></div>
+      <div class="row"><div class="lab">EXPIRED</div><div class="val">17 SEP 2013</div></div>
+      <div class="row"><div class="lab">RENEWED</div><div class="val">19 NOV 2026</div></div>
+      <div class="row"><div class="lab">NEW HOLDER</div><div class="val">GRAND THEFT AUTO VI</div></div>
+      <div class="row"><div class="lab">AUTHORIZED DRIVERS</div><div class="val">JASON &amp; LUCIA</div></div>
+      <div class="row"><div class="lab">VISION TEST</div><div class="val">20/20 IN VICE CITY</div></div>
+      <div class="row"><div class="lab">RESTRICTION</div><div class="val">NO DRIVING BEFORE 19 NOV 2026</div></div>
+      <div class="row"><div class="lab">POINTS</div><div class="val">13 &mdash; ONE PER YEAR OF WAITING</div></div>
+    </div>
+  </div>
+
+  <div class="support">214 GB TO DOWNLOAD &middot; DELAYED FALL 2025 &amp; MAY 2026 &middot; WAITED 4,811 DAYS</div>
+
+  <div class="fee">
+    <div class="ftext">RENEWAL FEE $79.99 &mdash; PAID IN FULL</div>
+    <div class="stamp">RENEWED</div>
+  </div>
+
+  <div class="banner">
+    <img src="ghost-mark-1024.png" alt="make.fun ghost">
+    <div class="btext">
+      <div class="b1">PAID BY MY AI AGENT</div>
+      <div class="b2">with real money it won in make.fun bounties.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
